@@ -20,7 +20,7 @@ const Layout = ({ children }: any) => {
     }
   )
 
-  const handleSignOut = (e) => {
+  const handleSignOut = (e: React.MouseEvent) => {
     e.preventDefault();
     signOut();
     navigate('/');

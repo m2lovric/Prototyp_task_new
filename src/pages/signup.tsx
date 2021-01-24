@@ -1,14 +1,16 @@
 import React, { useState } from 'react';
 import Layout from '../components/layout';
 import { createUser } from '../modules/Authentication/auth';
+import { useDispatch } from 'react-redux'
 
 const SignUp = () => {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
+  const dispatch = useDispatch();
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    await createUser(email, password);
+    createUser(email, password);
     setEmail('');
     setPassword('');
   }

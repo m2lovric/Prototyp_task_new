@@ -1,6 +1,6 @@
 import React from "react"
 import { Provider } from "react-redux"
-import { combineReducers, createStore } from 'redux';
+import { createStore } from 'redux';
 
 import counterReducer from './src/store/counterReducer';
 

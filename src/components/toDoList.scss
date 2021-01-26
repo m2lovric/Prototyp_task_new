@@ -1,0 +1,106 @@
+@import url('https://fonts.googleapis.com/css2?family=Bodoni+Moda:wght@400;600&family=Quicksand:wght@300;400;500&display=swap');
+
+body {
+  padding: 0;
+  margin: 0;
+  background-image: url('../assets/images/pexels-johannes-plenio-1103970.jpg');
+  background-size: cover;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+
+  h1, h2, h3, h4, h5, h6 {
+    font-weight: 700;
+    font-size: 2rem;
+    font-family: 'Bodoni Moda', serif;
+  }
+
+  p {
+    font-weight: 400;
+    font-size: 1.4rem;
+    font-family: 'Bodoni Moda', serif;
+  }
+}
+
+body::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background-color: rgba($color: #000000, $alpha: 0.2);
+  backdrop-filter: blur(2px);
+}
+
+.content {
+  width: 992px;
+  height: 75vh;
+  position: relative;
+  background: rgba(255,255,255,0.35);
+  border-radius: 10px;
+  border: 1px solid rgba(255,255,255,0.2);
+  backdrop-filter: blur(5px);
+
+  .blur {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: rgba(255,255,255,0.35);
+    backdrop-filter: blur(15px);    
+  }
+
+  .index {
+    padding: 0 20px;
+  }
+
+  header {
+    display: flex;
+    align-items: center;
+    padding-left: 50px;
+    width: 100%;
+    height: 50px;
+    border-bottom: 1px solid rgba(255,255,255,0.2);
+
+    a {
+      margin-right: 25px;
+      height: 100%;
+      line-height: 50px;
+      width: 100px;
+      text-align: center;
+      text-decoration: none;
+      color: #151515;
+      font-weight: 500;
+      font-family: 'Quicksand', sans-serif;
+
+      &::after {
+        content: '';
+        display: block;
+        width: 0;
+        height: 1px;
+        background: #000;
+        transition: width .25s;
+      }
+
+      &:hover::after {
+        width: 100%;
+      }
+    }
+  }
+
+  input {
+    background-color: rgba(255,255,255,0.2);
+    border: 1px solid rgba(255,255,255,0.2);
+    border-radius: 3px;
+    box-shadow: 2px 2px 8px 2px rgba(134, 140, 160, 0.2);
+    margin-right: 15px;
+    padding-left: 15px;
+    font-family: 'Quicksand', sans-serif;
+    font-size: 1.1rem;
+    outline: none;
+  }
+}

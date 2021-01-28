@@ -6,14 +6,10 @@ import { useSelector, useDispatch } from 'react-redux'
 const IndexPage = () => {
 
   const dispatch = useDispatch();
-  const counter = useSelector(state => state);
+  const counter = useSelector(state => state.counter);
 
   return (
     <Layout>
-      <h1>Hi people</h1>
-      <p>Welcome to your new Gatsby site.</p>
-      <p>{counter}</p>
-      <button onClick={() => dispatch({type: 'INCREMENT'})}>Increment</button>
       <ToDoList />
     </Layout>
   )
